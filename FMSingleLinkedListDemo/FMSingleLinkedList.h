@@ -28,9 +28,12 @@
 - (void)insertNode:(FMSingleLinkedNode *)newNode afterNodeForKey:(NSString *)key;
 - (void)bringNodeToHead:(FMSingleLinkedNode *)node;
 - (void)removeNode:(FMSingleLinkedNode *)node;
+- (void)replaceNode:(FMSingleLinkedNode *)firstNode withNode:(FMSingleLinkedNode *)secondNode;
+
 - (FMSingleLinkedNode *)nodeForKey:(NSString *)key;
 - (FMSingleLinkedNode *)headNode;
 - (FMSingleLinkedNode *)lastNode;
+
 - (NSInteger)length;
 - (BOOL)isEmpty;
 - (void)reverse;

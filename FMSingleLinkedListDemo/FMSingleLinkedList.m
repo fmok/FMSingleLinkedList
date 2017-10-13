@@ -183,6 +183,22 @@
     _headNode = node;
 }
 
+- (void)replaceNode:(FMSingleLinkedNode *)firstNode withNode:(FMSingleLinkedNode *)secondNode
+{
+    if (!firstNode || !secondNode) {
+        return;
+    }
+    
+    FMSingleLinkedNode *firstBeforeNode = [self nodeBeforeNode:firstNode];
+    FMSingleLinkedNode *firstAfterNode = firstNode.next;
+    FMSingleLinkedNode *secondBeforeNode = [self nodeBeforeNode:secondNode];
+    FMSingleLinkedNode *secondAfterNode = secondNode.next;
+    
+    
+    
+}
+
+#pragma mark -
 - (FMSingleLinkedNode *)nodeForKey:(NSString *)key
 {
     if (key.length == 0) {
