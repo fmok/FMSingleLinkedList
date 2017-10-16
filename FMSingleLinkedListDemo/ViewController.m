@@ -47,7 +47,7 @@
     [self.singleLinkedList readAllNode];
     // exchange
     NSLog(@"\n****************** exchange *************************\n");
-    [self.singleLinkedList exchangeNode:[self.singleLinkedList nodeForKey:@"one"] withNode:[self.singleLinkedList nodeForKey:@"six"]];
+    [self.singleLinkedList exchangeNode:[self.singleLinkedList nodeForKey:@"four"] withNode:[self.singleLinkedList nodeForKey:@"five"]];
     [self.singleLinkedList readAllNode];
     NSLog(@"\n****************** length *************************\n");
     NSLog(@"\n*** node length: %@\n", @(self.singleLinkedList.length));

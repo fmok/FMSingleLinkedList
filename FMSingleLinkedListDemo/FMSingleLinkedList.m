@@ -214,6 +214,10 @@
     /**
      func 2:
      */
+//    FMSingleLinkedNode *firstBeforeNode = [self nodeBeforeNode:firstNode];
+//    FMSingleLinkedNode *firstAfterNode = firstNode.next;
+//    FMSingleLinkedNode *secondBeforeNode = [self nodeBeforeNode:secondNode];
+//    FMSingleLinkedNode *secondAfterNode = secondNode.next;
 }
 
 #pragma mark -
@@ -279,6 +283,22 @@
 }
 
 #pragma mark - private
+- (BOOL)isHeadNode:(FMSingleLinkedNode *)node
+{
+    if ([node isEqual:self.headNode]) {
+        return YES;
+    }
+    return NO;
+}
+
+- (BOOL)isLastNode:(FMSingleLinkedNode *)node
+{
+    if ([node isEqual:self.lastNode]) {
+        return YES;
+    }
+    return NO;
+}
+
 - (FMSingleLinkedNode *)nodeBeforeNode:(FMSingleLinkedNode *)node
 {
     FMSingleLinkedNode *targetNode = nil;
@@ -303,6 +323,6 @@
         }
         tmpNode = tmpNode.next;
     }
-    return false;
+    return NO;
 }
 @end
