@@ -29,19 +29,27 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+    NSLog(@"\n****************** 初始 *************************\n");
     [self.singleLinkedList readAllNode];
-    NSLog(@"\n************************************************\n");
     FMSingleLinkedNode *node = [FMSingleLinkedNode nodeWithKey:@"six" value:@"6"];
     // insert
+    NSLog(@"\n****************** insert *************************\n");
     [self.singleLinkedList insertNode:node beforeNodeForKey:@"two"];
     [self.singleLinkedList insertNode:[FMSingleLinkedNode nodeWithKey:@"seven" value:@"7"] afterNodeForKey:@"five"];
-    // remove
-    [self.singleLinkedList removeNode:[self.singleLinkedList nodeForKey:@"two"]];
-    // bring to head
-    [self.singleLinkedList bringNodeToHead:[self.singleLinkedList nodeForKey:@"six"]];
-    // replace
-    
     [self.singleLinkedList readAllNode];
+    // remove
+    NSLog(@"\n****************** remove *************************\n");
+    [self.singleLinkedList removeNode:[self.singleLinkedList nodeForKey:@"two"]];
+    [self.singleLinkedList readAllNode];
+    // bring to head
+    NSLog(@"\n****************** bring to head *************************\n");
+    [self.singleLinkedList bringNodeToHead:[self.singleLinkedList nodeForKey:@"six"]];
+    [self.singleLinkedList readAllNode];
+    // exchange
+    NSLog(@"\n****************** exchange *************************\n");
+    [self.singleLinkedList exchangeNode:[self.singleLinkedList nodeForKey:@"one"] withNode:[self.singleLinkedList nodeForKey:@"six"]];
+    [self.singleLinkedList readAllNode];
+    NSLog(@"\n****************** length *************************\n");
     NSLog(@"\n*** node length: %@\n", @(self.singleLinkedList.length));
 }
 

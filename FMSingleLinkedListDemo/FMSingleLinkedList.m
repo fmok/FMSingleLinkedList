@@ -183,19 +183,37 @@
     _headNode = node;
 }
 
-- (void)replaceNode:(FMSingleLinkedNode *)firstNode withNode:(FMSingleLinkedNode *)secondNode
+- (void)exchangeNode:(FMSingleLinkedNode *)firstNode withNode:(FMSingleLinkedNode *)secondNode
 {
     if (!firstNode || !secondNode) {
         return;
     }
+    if (!_headNode) {
+        return;
+    }
+    if (![self isNodeExists:firstNode] || ![self isNodeExists:secondNode]) {
+        return;
+    }
+    if ([firstNode isEqual:secondNode]) {
+        return;
+    }
+    /**
+     func 1: 只交换 节点的 key value
+     问题：内存地址没有交换
+     */
+    NSString *keyFirst = firstNode.key;
+    NSString *valueFirst = firstNode.value;
+    NSString *keySecond = secondNode.key;
+    NSString *valueSecond = secondNode.value;
     
-    FMSingleLinkedNode *firstBeforeNode = [self nodeBeforeNode:firstNode];
-    FMSingleLinkedNode *firstAfterNode = firstNode.next;
-    FMSingleLinkedNode *secondBeforeNode = [self nodeBeforeNode:secondNode];
-    FMSingleLinkedNode *secondAfterNode = secondNode.next;
+    firstNode.key = keySecond;
+    firstNode.value = valueSecond;
+    secondNode.key = keyFirst;
+    secondNode.value = valueFirst;
     
-    
-    
+    /**
+     func 2:
+     */
 }
 
 #pragma mark -
