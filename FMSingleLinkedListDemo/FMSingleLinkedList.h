@@ -29,6 +29,7 @@
 - (void)bringNodeToHead:(FMSingleLinkedNode *)node;
 - (void)removeNode:(FMSingleLinkedNode *)node;
 - (void)exchangeNode:(FMSingleLinkedNode *)firstNode withNode:(FMSingleLinkedNode *)secondNode;
+- (void)replaceNodeForKey:(NSString *)key withNode:(FMSingleLinkedNode *)node;
 
 - (FMSingleLinkedNode *)nodeForKey:(NSString *)key;
 - (FMSingleLinkedNode *)headNode;

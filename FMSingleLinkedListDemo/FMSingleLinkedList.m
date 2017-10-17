@@ -220,6 +220,26 @@
 //    FMSingleLinkedNode *secondAfterNode = secondNode.next;
 }
 
+- (void)replaceNodeForKey:(NSString *)key withNode:(FMSingleLinkedNode *)newNode
+{
+    if (key.length == 0 || !newNode || newNode.key.length == 0) {
+        return;
+    }
+    if ([self isNodeExists:newNode]) {
+        return;
+    }
+    if (!_headNode) {
+        return;
+    }
+    FMSingleLinkedNode *node = _innerMap[key];
+    if (node) {
+        node.key = newNode.key;
+        node.value = newNode.value;
+    } else {
+        [self insertNode:newNode];  //insert to tail
+    }
+}
+
 #pragma mark -
 - (FMSingleLinkedNode *)nodeForKey:(NSString *)key
 {
