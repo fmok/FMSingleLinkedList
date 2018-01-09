@@ -3,6 +3,6 @@
 
 ## 效果如下
 
-![](https://github.com/fmok/FMSingleLinkedListDemo/raw/master/ScreenShots/1.png)
-![](https://github.com/fmok/FMSingleLinkedListDemo/raw/master/ScreenShots/2.png)
-![](https://github.com/fmok/FMSingleLinkedListDemo/raw/master/ScreenShots/3.png)
+![](https://github.com/fmok/FMSingleLinkedList/raw/master/ScreenShots/1.png)
+![](https://github.com/fmok/FMSingleLinkedList/raw/master/ScreenShots/2.png)
+![](https://github.com/fmok/FMSingleLinkedList/raw/master/ScreenShots/3.png)
