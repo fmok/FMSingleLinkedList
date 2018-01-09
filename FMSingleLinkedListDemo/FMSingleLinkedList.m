@@ -205,7 +205,7 @@
     NSString *valueFirst = firstNode.value;
     NSString *keySecond = secondNode.key;
     NSString *valueSecond = secondNode.value;
-    
+
     firstNode.key = keySecond;
     firstNode.value = valueSecond;
     secondNode.key = keyFirst;
@@ -214,10 +214,7 @@
     /**
      func 2:
      */
-//    FMSingleLinkedNode *firstBeforeNode = [self nodeBeforeNode:firstNode];
-//    FMSingleLinkedNode *firstAfterNode = firstNode.next;
-//    FMSingleLinkedNode *secondBeforeNode = [self nodeBeforeNode:secondNode];
-//    FMSingleLinkedNode *secondAfterNode = secondNode.next;
+    // 暂时没有更好的办法，不想增加很多判断，low而且容易出错
 }
 
 - (void)replaceNodeForKey:(NSString *)key withNode:(FMSingleLinkedNode *)newNode
